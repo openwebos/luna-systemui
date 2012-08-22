@@ -1,0 +1,60 @@
+/* @@@LICENSE
+* Copyright (c) 2011 - 2012 Hewlett-Packard Development Company, L.P.
+* Use of this file is subject to the license terms as set forth in the
+* file README.md found in the root directory of this repository.
+* LICENSE@@@   */
+
+/*
+ * Other Files Styles
+ */
+
+.files-file-ext {
+  	display: inline-block;
+	color: #8f8f90;
+}
+
+.files-file-date,
+.files-file-size,
+.files-file-duration,
+.video-file-size, 
+.video-file-duration {
+  color: #4d4d4f;
+	font-size: 12px;
+	line-height: 14px;
+	height: 14px !important;
+	margin: -15px 0px 0px 58px;
+	position: absolute;
+}
+
+.files-file-size {
+  left: 101px;
+}
+
+.video-file-size {
+  left: 101px;
+}
+
+.file-selected {	
+	background: url(../images/highlight-bg.png) left top no-repeat;
+    -webkit-background-size: 100% 100%;
+}
+
+.enyo-misc-files-list-empty {
+	background: url(../images/empty-folder-other.png) center center no-repeat;
+	height:120px;
+	width:120px;
+}
+
+.enyo-misc-files-list-empty-msg {
+	color: grey;
+	font-size: 18px;
+}
+
+.filepicker-file-icon  {
+  margin: 7px 0px 0px 2px;
+}
+
+.files-file-name {
+    padding-left: 14px;
+    width: 300px;
+}

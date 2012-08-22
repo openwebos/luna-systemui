@@ -1,0 +1,123 @@
+/* @@@LICENSE
+* Copyright (c) 2011 - 2012 Hewlett-Packard Development Company, L.P.
+* Use of this file is subject to the license terms as set forth in the
+* file README.md found in the root directory of this repository.
+* LICENSE@@@   */
+
+body {
+	color: #FFF;
+	font-family: Prelude, 'Prelude Medium', 'Segoe UI', Arial, Helvetica, sans-serif;
+	background:transparent;
+}
+
+.notification-container {
+	margin:0 10px 10px;
+}
+
+.notification-icon {
+		float: right;
+		margin-left:10px;
+}
+
+.notification-container .notification-icon + .notification-text {
+	min-height:50px;
+}
+
+.title {
+		margin-bottom:5px;
+		font-size: 18px;
+		font-weight: bold;
+		color: #fff;
+}
+
+.message {
+		font-size: 14px;
+		font-weight: bold;
+		color: #fff;
+}       
+
+.icon-warning {
+		background: url(../images/warning-icon.png) bottom left no-repeat;
+		height: 59px;
+		width: 59px;
+		margin-top:-8px;
+		margin-right:-8px;
+}
+
+.icon-drive-mode {
+		background: url(../images/drive-mode-icon.png) top left no-repeat;
+		width: 50px;
+		height: 80px;
+}
+
+.icon-power-off  {
+		background: url(../images/warning-icon.png) top left no-repeat;
+		width: 70px;
+		height: 90px;
+}
+
+.icon-flight-mode {
+		background: url(../images/flight-mode-icon.png) center center no-repeat;
+		width: 53px;
+		height: 55px;
+}
+
+.icon-low-battery {
+		background: url(../images/system-notification-lowbattery.png) center center no-repeat;
+		width: 48px;
+		height: 70px;
+}
+
+.icon-wifi {
+		background: url(../images/system-notification-wifi-icon.png) bottom left no-repeat;
+		width: 60px;
+		height: 48px;
+}         
+                    
+.icon-bluetooth {
+		background: url(../images/system-notification-bluetooth.png) bottom left no-repeat;
+		width: 58px;
+		height: 70px;
+		margin-top:-8px;
+		margin-right:-8px;
+}
+
+.icon-location {
+		background: url(../images/system-notification-location-services.png) bottom left no-repeat;
+		width: 64px;
+		height: 64px;
+		margin-right:-9px;
+}
+
+.icon-systemupdate {
+		background: url(../images/notification-large-update.png) bottom left no-repeat;
+		width: 48px;
+		height: 48px;
+}
+
+.info-icon {
+  height: 37px;
+  width: 66px;
+  background: url(../images/palm-notification-button-affirmative-info.png) no-repeat top center;
+  margin-top:-14px;
+  right:1px;
+  position: absolute;
+}
+
+.info-icon.selected {
+  background: url(../images/palm-notification-button-affirmative-info.png) no-repeat center center;
+}
+
+.system-notification.usb-mode .info-icon {
+  height: 50px;
+  width: 66px;
+  background: url(../images/palm-notification-button-info.png) no-repeat top center;
+  right: -20px;
+  position: absolute;
+  margin-top: -3px;
+}
+
+.system-notification.usb-mode .info-icon.selected {
+  background: url(../images/palm-notification-button-info.png) no-repeat center center;
+}
+

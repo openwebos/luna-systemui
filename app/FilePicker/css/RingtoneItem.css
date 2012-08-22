@@ -1,0 +1,16 @@
+/* @@@LICENSE
+* Copyright (c) 2011 - 2012 Hewlett-Packard Development Company, L.P.
+* Use of this file is subject to the license terms as set forth in the
+* file README.md found in the root directory of this repository.
+* LICENSE@@@   */
+
+.enyo-ringtone-item {
+	height: 58px;
+	padding-top: 18px;
+}
+
+.ringtone-item-checked {
+	width: 32px;
+	height: 25px;
+	background: url(../images/checkmark.png) center right no-repeat;
+}

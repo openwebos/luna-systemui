@@ -1,0 +1,9 @@
+{
+	"title": "FilePicker",
+	"type": "web",
+	"main": "filepicker.html",
+	"id": "com.palm.systemui",
+	"version": "1.0.0",
+	"vendor": "HP",
+	"noWindow":true
+}

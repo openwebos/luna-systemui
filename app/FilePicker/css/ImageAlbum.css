@@ -1,0 +1,53 @@
+/* @@@LICENSE
+* Copyright (c) 2011 - 2012 Hewlett-Packard Development Company, L.P.
+* Use of this file is subject to the license terms as set forth in the
+* file README.md found in the root directory of this repository.
+* LICENSE@@@   */
+
+.enyo-image-album div {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.enyo-image-album-item {
+	display: inline-block;
+}
+
+.enyo-image-album-item-overlay {
+	position: absolute;
+	margin: 1px 0px 0px 2px;
+	width: 102px;
+	height: 102px;
+	background: url(../images/image-overlay.png) top left no-repeat;
+}
+
+.enyo-image-album-item-overlay.enyo-button-down {
+	background: url(../images/image-overlay.png) bottom left no-repeat;
+}
+
+.enyo-image-album-item-image {
+	margin: 6px 8px 6px 8px;
+
+}
+.AlbumGridThumb {
+	-webkit-border-image: url(../images/photo-9tile.png) 6 7 7 6 repeat repeat;
+	border-width: 6px 7px 7px 6px;
+	height: 107px;
+	width: 107px;
+	margin: 2px;
+}
+.ImageSelectHighlight {
+	-webkit-border-image: url(../images/multi-select-9tile.png) 14 14 14 14 repeat repeat;
+	border-width: 14px;
+	height: 107px;
+	width: 107px;
+	margin: -6px -6px;
+	z-index: 8px;
+}
+.custom-rowgroup{
+	background-color: #eee;
+	-webkit-border-radius: 6px;
+	border: 1px solid #919191;
+	margin-top:15px;
+	margin-bottom:15px;
+}

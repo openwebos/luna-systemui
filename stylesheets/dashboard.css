@@ -1,0 +1,194 @@
+/* @@@LICENSE
+* Copyright (c) 2010 - 2012 Hewlett-Packard Development Company, L.P.
+* Use of this file is subject to the license terms as set forth in the
+* file README.md found in the root directory of this repository.
+* LICENSE@@@   */
+
+body {
+	color: #FFF;
+	font-family: Prelude, 'Prelude Medium', 'Segoe UI', Arial, Helvetica, sans-serif;
+	margin: 0;
+	background:transparent;
+}
+
+.dashboard-notification-module {
+	height: 50px;
+	display: -webkit-box;
+	/*background-color:#F9D;*/
+/*	-webkit-box-orient: horizontal;
+	-webkit-box-align: stretch;*/
+}
+
+.palm-dashboard-icon-container {
+	margin-top:1px;
+  width: 54px;
+  height: 48px;
+  float: left;
+  clear: right;
+  position:relative;
+ margin-right: 4px;
+  -webkit-border-image: url(../images/dashboard-container.png) 0 12 0 12 repeat stretch;
+  -webkit-box-sizing: border-box;
+  border-width: 0px 12px 0px 12px;
+}
+
+.palm-dashboard-text-container {
+  height: 48px;
+  width: auto;
+  max-width: 320px;
+  overflow: hidden;
+  -webkit-border-image: url(../images/dashboard-container.png) 0 12 0 12 repeat stretch;
+  -webkit-box-sizing: border-box;
+  vertical-align: middle;
+  border-width: 0px 12px 0px 12px;
+  font-size: 16px;
+}
+
+.palm-dashboard-icon-container:active,
+.palm-dashboard-text-container:active,
+.palm-dashboard-icon-container.selected,
+.palm-dashboard-text-container.selected {
+  -webkit-border-image: url(../images/dashboard-container-active.png) 0 12 0 12 repeat stretch;
+}
+
+/* items within the containers */
+
+.palm-dashboard-icon	{
+  width: 48px;
+  height: 48px;
+  margin-left: -9px;
+  background: url(../images/notification-large-info.png) center center no-repeat;
+}
+
+.palm-dashboard-icon.alert {
+  background: url(../images/notification-alert.png) center left no-repeat;
+}
+
+.dashboard-newitem {
+  float: right;
+  line-height: 30px;
+  font-weight: bold;
+  height: 28px;
+  min-width: 24px;
+  text-align: center;
+  vertical-align: baseline;
+  -webkit-border-image: url(../images/dashboard-newitem-badge.png) 0 12 0 12 repeat stretch;
+  -webkit-box-sizing: border-box;
+  border-width: 0px 12px 0px 12px;
+  position:relative;
+  top:-50px;
+  left:25px;
+  font-size: 16px;
+}
+
+.palm-dashboard-icon-container:active .dashboard-newitem,
+.palm-dashboard-icon-container.selected .dashboard-newitem {
+  -webkit-border-image: url(../images/dashboard-newitem-badge-active.png) 0 12 0 12 repeat stretch;
+}
+
+.dashboard-newitem span {
+  position:relative;
+  top:-3px;
+  margin: 0 -6px;
+  font-size: 16px;
+}
+
+.dashboard-title,
+.palm-dashboard-text {
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dashboard-title {
+	margin-top:6px;
+	font-weight: bold;
+}
+.palm-dashboard-text {
+	font-size: 14px;
+	margin-top: -2px;
+}
+
+/* single version of the notification */
+
+.single .dashboard-newitem {
+  display: none;
+}
+.single .palm-dashboard-icon-container {
+  margin-right: 0px;
+  width: 57px;
+  -webkit-border-image: url(../images/dashboard-container-sprite.png) 0 1 144 12 repeat stretch;
+}
+.single .palm-dashboard-text-container {
+  -webkit-border-image: url(../images/dashboard-container-sprite.png) 96 12 48 1 repeat stretch;
+}
+.single:active .palm-dashboard-icon-container,
+.single.selected .palm-dashboard-icon-container {
+  -webkit-border-image: url(../images/dashboard-container-sprite.png) 48 1 96 12 repeat stretch;
+}
+.single:active .palm-dashboard-text-container,
+.single.selected .palm-dashboard-text-container {
+  -webkit-border-image: url(../images/dashboard-container-sprite.png) 144 12 0 1 repeat stretch;
+}
+
+.sync-activity-animation {
+	margin-top: 7px;
+	float: right;
+}
+
+palm-dashboard-text.normal { 
+	font-weight: normal;
+}
+
+.palm-dashboard-icon.charging { background: url(../images/notification-large-usb.png) center left no-repeat; }
+
+.palm-dashboard-icon.dock { background: url(../images/notification-large-dock.png) center left no-repeat; }
+
+.palm-dashboard-icon.dataimport { background: url(../images/notification-large-sync.png) center left no-repeat; }
+
+.palm-dashboard-icon.phonenetworkerror { background: url(../images/notification-large-error.png) center left no-repeat; }
+
+.palm-dashboard-icon.updateAvailable { background: url(../images/notification-large-update.png) center left no-repeat; }
+
+.palm-dashboard-icon.tutorial { background: url(../images/notification-large-tutorial.png) center left no-repeat; }
+
+.palm-dashboard-icon.apprestore { background: url(../images/notification-large-appcatalog.png) center left no-repeat; }
+
+.palm-dashboard-icon.info { background: url(../images/notification-large-info.png) center left no-repeat; }
+
+.palm-dashboard-icon.opensearch { background: url(../images/opensearch-large-icon.png) center left no-repeat; }
+
+/* syncing account specific styles */
+
+.sync-activity-animation {
+	margin-top: 7px;
+	float: right;
+}
+
+.palm-dashboard-icon.dashboard-account-icon { 
+  background: url(../images/notification-large-sync.png) center left no-repeat;
+}
+
+.palm-dashboard-icon.dashboard-account-icon.EAS,
+.palm-dashboard-icon.dashboard-account-icon.eas {     
+  background: url(../images/notification-large-outlook.png) center center no-repeat;
+}
+
+.palm-dashboard-icon.dashboard-account-icon.Google,
+.palm-dashboard-icon.dashboard-account-icon.gmail {     
+  background: url(../images/notification-large-google.png) center center no-repeat;
+}
+
+.palm-dashboard-icon.dashboard-account-icon.facebook {       
+  background: url(../images/notification-large-facebook.png) center center no-repeat;
+}
+
+.palm-dashboard-icon.dashboard-account-icon.linkedin {       
+  background: url(../images/notification-large-linkedin.png) center center no-repeat;
+}
+
+.palm-dashboard-icon.dashboard-account-icon.yahoo {       
+  background: url(../images/notification-large-yahoo.png) center center no-repeat;
+}
+
+

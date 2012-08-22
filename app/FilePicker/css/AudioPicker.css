@@ -1,0 +1,83 @@
+/* @@@LICENSE
+* Copyright (c) 2011 - 2012 Hewlett-Packard Development Company, L.P.
+* Use of this file is subject to the license terms as set forth in the
+* file README.md found in the root directory of this repository.
+* LICENSE@@@   */
+
+.enyo-audiolist-artwork-frame {
+	background: url(../images/highlighticon.png) top left no-repeat;
+	width: 38px;
+  	height: 38px;
+}	
+
+.enyo-audiolist-artwork {
+	padding:3px;
+}
+
+.enyo-audiolist-music-preview-play {
+	width: 46px;
+  	height: 46px; 
+	background: url(../images/icn-play.png) center center no-repeat;
+}
+
+.enyo-audiolist-music-preview-stop {
+  	background: url(../images/icn-pause.png) center center no-repeat;
+}
+.enyo-audiolist-audio-title {
+	font-size: 14px;
+    width: 140px;
+}
+
+.enyo-audiolist-audio-artist {
+	font-size: 12px;
+    color: #4d4d4f;
+}
+
+.audio-timer-text {
+	font-size: 12px;
+}
+
+.enyo-audio-list-empty {
+	background: url(../images/empty-folder-audio.png) center center no-repeat;
+	color: grey;
+	font-size: 18px;
+	height:	120px;
+	width:	120px;
+}
+
+.audio-file-selected {
+	border: 3px solid blue;
+}
+
+.enyo-progress-bar-item-background {
+	border-width: 12px 0px;
+	-webkit-border-image: url(../images/progress-item.png) 12 0 12 0 repeat repeat;
+	-webkit-box-sizing: border-box;
+	position: relative;
+}
+
+.enyo-progress-bar-item-inner {
+	margin: -12px 0px;
+	height:100%;
+	border-width: 0 9px 0 0;
+	position:absolute;
+	-webkit-border-image: url(../images/progress-item-inner.png) 0 9 0 0;
+}
+
+.enyo-progress-bar-item-client {
+	margin: -12px 0px;
+	position:relative;
+}
+
+.audioFileSelected {
+	-webkit-border-image: url(../images/multi-select-9tile.png) 14 14 14 14;
+	border-width: 14px;
+	z-index: 8px;
+	margin: -14px;
+	height: 38px;
+	width: 38px;
+}
+.boxshadow{
+	box-shadow: 0px 2px 5px #888;
+	-webkit-box-shadow: 0px 2px 5px #888;
+}

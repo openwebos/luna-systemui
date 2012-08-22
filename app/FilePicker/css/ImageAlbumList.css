@@ -1,0 +1,41 @@
+/* @@@LICENSE
+* Copyright (c) 2011 - 2012 Hewlett-Packard Development Company, L.P.
+* Use of this file is subject to the license terms as set forth in the
+* file README.md found in the root directory of this repository.
+* LICENSE@@@   */
+
+.albumArtThumb {
+	background: url(../images/icn-album.png) center center no-repeat;
+	height:48px;
+	width:48px;
+	margin-right:5px;
+}
+
+.enyo-image-album-list-empty {
+	background: url(../images/empty-photo-library.png) center center no-repeat;
+	height:120px;
+	width:120px;
+}
+
+.enyo-image-album-list-empty-msg {
+	font-size:20px;
+	color:grey;
+}
+
+.icon-album-background {
+	margin-left: 10px;
+	margin-top:-1px;
+	width: 45px;
+	height: 45px;
+	background-image: url(../images/icon_album_photo_background.png);
+}
+
+.icon-album-foreground {
+	top: 12px;
+	margin-top:5px;
+	background-color: white;
+	padding: 2px;
+	width: 34px;
+	height: 34px;
+	/* -webkit-box-shadow: 3px 3px 3px #222; */
+}

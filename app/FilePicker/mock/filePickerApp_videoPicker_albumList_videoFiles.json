@@ -1,0 +1,32 @@
+{
+    "returnValue": true,
+    "results": [
+        {
+            "_id": "++HQ9UtxxYhPmX01",
+            "_kind": "com.palm.media.video.file:1",
+            "_rev": 9494,
+            "albumId": "++HLSdeoFancy_",
+            "albumPath": "mock\/images\/Fancy",
+            "appGridThumbnail": {
+                "cached": true,
+                "path": "mock\/images\/Fancy\/hp_handhelds_poster.jpg"
+            },
+            "appStripThumbnail": {
+                "cached": true,
+                "path": "mock\/images\/Fancy\/hp_handhelds_poster.jpg"
+            },
+            "createdTime": 1289644753,
+            "path": "mock\/videos\/hp_handhelds.mp4",
+            "duration": 60.001,
+            "size": 123456,
+            "thumbnails": [
+                { "id": "b01",
+                  "data": "mock\/images\/Fancy\/hp_handhelds_poster.jpg",
+                  "type": "embedded"
+                }
+            ],
+            "type": "local",
+            "mediaType": "video"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+	"title": "Status Bar",
+	"type": "web",
+	"main": "index.html",
+	"id": "com.palm.systemui",
+	"icon": "icon.png",
+	"splashicon": "icon-256x256.png",
+	"version": "1.0.0",
+	"vendor": "Palm",
+	"noWindow":true
+}

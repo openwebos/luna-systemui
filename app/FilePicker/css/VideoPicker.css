@@ -1,0 +1,98 @@
+/* @@@LICENSE
+* Copyright (c) 2011 - 2012 Hewlett-Packard Development Company, L.P.
+* Use of this file is subject to the license terms as set forth in the
+* file README.md found in the root directory of this repository.
+* LICENSE@@@   */
+
+/*
+ * Vide Album List Styles.
+ */
+.enyo-video-album-list-album-name {
+	padding-top: 30px;
+	vertical-align: middle;
+	font-size: 18px;
+}
+
+.enyo-video-album-list-empty {
+	background: url(../images/empty-folder-videos.png) center center no-repeat;
+	padding-top: 200px;
+	text-align: center;
+	color: grey;
+	font-size: 18px;
+}
+
+/*
+ * Video Thumbnails.
+ */
+.enyo-video-album-thumbnails-client {
+   	position: relative;
+   	left: 0px;
+    top: 3px;
+	width: 144px;
+	height: 86px;
+	float: right;
+	background: url(../images/thumbnails-overlay.png) left top no-repeat;
+}
+
+.enyo-video-album-thumbnail-overlay-show-thumb-1 { background-position: 0px 0px; }
+.enyo-video-album-thumbnail-overlay-show-thumb-2 { background-position: 0px -86px; }
+.enyo-video-album-thumbnail-overlay-show-thumb-3 { background-position: 0px -172px; }
+
+.enyo-video-album-count-container-2 { margin-top: 15px; right: 101px; }
+.enyo-video-album-count-container-3 { right: 111px; }
+
+.enyo-video-album-thumbnail-0 {
+	position:absolute; 
+	left: 49px; top: 4px;
+	width: 86px;
+}
+
+.enyo-video-album-thumbnail-1 {
+	position:absolute; 
+	left: 29px; top: 13px;
+	width: 86px;
+}
+
+.enyo-video-album-thumbnail-2 {
+	position:absolute; 
+	left: 9px; top: 8px;
+	width: 86px;
+}
+
+/*
+ * Video List Styles
+ */
+
+.enyo-videolist-artwork-frame {
+    background: url(../images/video-list-thumbnail.png) 0px 0px no-repeat;
+    height: 90px;
+    width: 116px;
+}
+
+.enyo-videolist-artwork {
+	margin: 7px 16px 0px 8px;
+    float: left;
+}
+
+.enyo-videolist-video-name {
+  margin-top: -4px;
+  line-height: 27px;
+}
+
+.enyo-videolist-video-duration,
+.enyo-videolist-video-size,
+.enyo-videolist-video-edit {
+    color: #4d4d4f;
+    font-size: 17px;
+    line-height: 22px;
+}
+
+.enyo-videolist-video-duration,
+.enyo-videolist-video-size {
+    max-width: 50%;
+	padding:0 10px 0 10px;
+}
+
+.enyo-videolist-video-edit {
+    clear: right;
+}

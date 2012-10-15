@@ -19,6 +19,7 @@
 /*
  * This Dashboard is created to notify user if the background backup service is failing due to either wrong password or any other reason.
  */
+
 enyo.kind({
 	name: "BackupDashboard",
 	kind: "HFlexBox",
@@ -49,8 +50,7 @@ enyo.kind({
 		},
 		{
 		 	kind:enyo.PalmService, name:"launchApp", service:"palm://com.palm.applicationManager/", method:"open"
-		 }
-		
+		}
 	],
 	
 	create: function() {
@@ -1358,5 +1358,90 @@ enyo.kind({
 	}
 });
 
+/*
+ * Application notification dashboard. Allows non Enyo applications to
+ * show notifications using Luna bus. To do that, applications should publish
+ * to systemUI with the message type showAppNotification. They can also hide
+ * the notification with hideAppNotification.
+ */
+
+enyo.kind({
+        name: "AppNotification",
+        kind: "VFlexBox",
+        className:"dashboard-window",
+
+        components: [
+                {
+                        kind:enyo.PalmService,
+                        name:"SystemManager",
+                        service:"palm://com.palm.systemmanager/"
+                },
+                {
+                        kind: enyo.Control,
+                        className: "dashboard-notification-module single",
+                        components: [
+                                {
+                                        className: "palm-dashboard-icon-container", components:[
+                                                {
+                                                        name:"dashboardIcon",
+                                                        kind: enyo.Image,
+                                                        className: "palm-dashboard-icon"
+                                                }
+                                        ]
+                                },
+                                {
+                                        className: "palm-dashboard-text-container",
+                                        components: [
+                                                {
+                                                        className: "dashboard-title",
+                                                        name: 'dashTitle',
+                                                },
+                                                {
+                                                        className: "palm-dashboard-text normal",
+                                                        name: "notificationMessage"
+                                                }
+                                        ]
+                                }
+                        ]
+                },
+                {
+                        kind: "ApplicationEvents",
+                        onWindowParamsChange:"update"
+                },
+                {
+                        kind:"SystemManager",
+                        name:"publishToSystemUI",
+                        method:"publishToSystemUI"
+                }
+        ],
+        create: function() {
+                this.inherited(arguments);
+                this.update();
+        },
+        update: function() {
+                this.params = enyo.windowParams;
+                this.$.dashTitle.setContent(this.params.title);
+                if(this.params.msg != undefined)
+                        this.$.notificationMessage.setContent(this.params.msg);
+                if (this.params.icon != undefined)
+                        this.$.dashboardIcon.setSrc(this.params.icon);
+                if (this.params.duration)
+                        this.duration = this.params.duration;
+                else
+                        this.duration = 3;
+        },
+        clickHandler: function() {
+                var callParams = {
+                        event: "appNotificationDone",
+                        message: {
+                                appId: this.params.appId,
+                                msgId: this.params.msgId,
+                                response: "clicked"
+                        }
+                };
+                this.$.publishToSystemUI.call(callParams);
+                close();
+        }
+});
 
 

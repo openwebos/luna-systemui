@@ -50,6 +50,9 @@ enyo.kind({
 	},
 	
 	initialize: function() {
+                this.uiAlertsMethods["showAppNotification"] = enyo.hitch(this, "handleShowAppNotification");
+                this.uiAlertsMethods["hideAppNotification"] = enyo.hitch(this, "handleHideAppNotification");
+                this.uiAlertsMethods["appNotificationDone"] = enyo.hitch(this, "handleAppNotificationDone");
 		this.uiAlertsMethods["subscribeToBackupStatus"] = enyo.hitch(this, "handleBackupStatusNotifications");
 		this.uiAlertsMethods["registerForLocationServiceNotifications"] = enyo.hitch(this,"handleLocationServiceNotifications");
 		this.uiAlertsMethods["getStatus"] = enyo.hitch(this, "handleDataImportNotifications");
@@ -450,9 +453,37 @@ enyo.kind({
 		var windowHeight =  (enyo.g11n.currentLocale().locale == "en_us") ? 200 : 220;
 		enyo.windows.openPopup("app/SystemManagerAlerts/systemmanageralerts.html", "DiskSpaceAlert", inResponse, undefined, windowHeight);
 		
-	}
+	},
 
+        handleShowAppNotification: function(payload) {
+                if(payload.msgId == undefined || payload.appId == undefined || payload.title == undefined)
+                        return;
 
+                if(payload.icon==undefined)
+                        payload.icon = '/usr/lib/luna/system/luna-systemui/images/notification-large-info.png';
+                enyo.windows.addBannerMessage(payload.title, "{}", payload.icon);
+
+                var cardId = "AppNotification"+payload.appId+payload.msgId;
+                var wCard = enyo.windows.fetchWindow(cardId);
+                if (wCard)
+                        enyo.windows.setWindowParams(wCard, payload);
+                else
+                        enyo.windows.openDashboard("app/SystemManagerAlerts/systemmanageralerts.html", cardId, enyo.json.stringify(payload), {"icon":payload.icon});
+        },
+
+        handleHideAppNotification: function(payload) {
+                if(payload.msgId == undefined || payload.appId == undefined)
+                        return;
+
+                var cardId = "AppNotification"+payload.appId+payload.msgId;
+                var wCard = enyo.windows.fetchWindow(cardId);
+                if (wCard)
+                        wCard.close();
+        },
+
+        handleAppNotificationDone: function(payload) {
+
+        }
 });
 
 
